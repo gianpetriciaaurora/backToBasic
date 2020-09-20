@@ -5,7 +5,7 @@
 // Contoh, jika angka adalah 8, walaupun dia sudah palindrome, harus mencari angka selanjutnya yang palindrome, yaitu 9.
 
 function angkaPalindrome(num) {
- 
+    
     while (true) {
         num++;
         var angka = num.toString()
