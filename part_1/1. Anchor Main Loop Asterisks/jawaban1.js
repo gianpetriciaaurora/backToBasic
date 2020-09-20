@@ -2,5 +2,6 @@
 for(i = 0; i < 5; i++){
     var bintang = '';
     bintang = '*';
-    console.log(bintang);
+    
 } 
+console.log(bintang);
