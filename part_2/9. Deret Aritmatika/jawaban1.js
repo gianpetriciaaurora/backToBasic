@@ -8,7 +8,7 @@
 function tentukanDeretAritmatika(arr) {
     var total = 0;
     for(i = 0; i < arr.length; i++){
-        var hasilPembanding = arr[1]- arr[0]
+        var hasilPembanding = arr[1]- arr[0] 
         var listPembanding = arr[i]
         total += hasilPembanding
         
@@ -19,7 +19,7 @@ function tentukanDeretAritmatika(arr) {
         return true
     }
   }
-  
+
 
   console.log(tentukanDeretAritmatika([1, 2, 3, 4, 5, 6])); // true
   console.log(tentukanDeretAritmatika([2, 4, 6, 12, 24])); // false
