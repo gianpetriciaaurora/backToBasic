@@ -29,3 +29,7 @@ console.log(targetTerdekat(['o', ' ', ' ', ' ', 'x', 'x', 'x'])); // 4
 console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' '])); // 1
 console.log(targetTerdekat([' ', ' ', 'o', ' '])); // 0
 console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x'])); // 2
+
+// Fungsi abs () mengembalikan nilai absolut sebuah angka.
+// Jika fungsi abs () diberikan nilai non-numerik, array dengan satu dari satu elemen,
+// atau objek kosong sebagai parameter angka, fungsi abs () akan mengembalikan NaN (bukan angka).
