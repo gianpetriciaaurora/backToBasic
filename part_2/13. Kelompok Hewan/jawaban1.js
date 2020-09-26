@@ -6,25 +6,35 @@
 // maka akan menampilkan output: `[ [ "ayam" ], [ "bebek", "bangau" ], [ "kucing ], [ "zebra" ] ]`
 // Urutan hewan dalam array setiap pengelompokan huruf tidak penting.
 
-
 function groupAnimals(animals) {
-    var abjad = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
-                'q','r','s','t','u','v','w','x','y','z'];
-    var temp = [];
-    
-    for(var i = 0; i < abjad.length; i++){
-        var temp1=[];
-        for(var j = 0; j < animals.length; j++){
-            if (animals[j][0] == abjad[i]) {
-                temp1.push(animals[j]);
-            }
+  var hewan = animals.sort();
+  var zoo = [];
+
+  for (let i = 0; i < hewan.length; i++) {
+    var grup = [];
+    if (zoo.length === 0) {
+      grup.push(hewan[i]);
+      zoo.push(grup)
+    } else {
+      var flag = false
+      for (let j=0; j < zoo.length; j++) {
+        var compare=zoo[j][0][0]
+        if(compare==hewan[i][0]){
+          zoo[j].push(hewan[i])
+          flag=true
         }
-        if (temp1 != '') {
-            temp.push(temp1)
-        }
+      }
+
+      if(flag==false){
+        grup.push(hewan[i])
+        zoo.push(grup)
+      }
     }
-    return temp
   }
+
+  return zoo;
+}
+
 
 // TEST CASES
 console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));
@@ -45,3 +55,22 @@ console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil', 'unta', 'c
 // shift ( ) : digunakan untuk menghapus / remove isi array paling awal.
 // unshift ( some_value ) : fungsi yang digunakan untuk memasukkan value ke sebuah array tetapi disimpan di paling awal / ujung kiri.
 
+//cara lain
+// function groupAnimals(animals) {
+//     var abjad = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
+//                 'q','r','s','t','u','v','w','x','y','z'];
+//     var temp = [];
+    
+//     for(var i = 0; i < abjad.length; i++){
+//         var temp1=[];
+//         for(var j = 0; j < animals.length; j++){
+//             if (animals[j][0] == abjad[i]) {
+//                 temp1.push(animals[j]);
+//             }
+//         }
+//         if (temp1 != '') {
+//             temp.push(temp1)
+//         }
+//     }
+//     return temp
+//   }

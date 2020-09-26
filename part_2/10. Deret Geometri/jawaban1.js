@@ -6,9 +6,9 @@
 // karena tidak perbedaan selisih antar angka yang tidak konsisten secara perkalian (27 * 3 bukanlah 48!).
 
 function tentukanDeretGeometri(arr) {
-  var selisih = arr[1] / arr[0]
+  let selisih = arr[1] / arr[0]
   
-  for(var i = 0; i< arr.length-1; i++){
+  for(let i = 0; i< arr.length-1; i++){
     if(selisih !== arr[i+1]/arr[i]){
       return false;
     }
